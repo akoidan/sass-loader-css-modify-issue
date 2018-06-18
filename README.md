@@ -1,5 +1,6 @@
-yarn install
-yarn run build
+`yarn install`
+
+`yarn run build`
 
 **expected output**:
 
