@@ -16,22 +16,22 @@ module.exports = {
           "sass-loader?indentedSyntax",
         ]
       },
-      {
-        test: /\.fff$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ]
-      },
+      // {
+      //   test: /\.fff$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader",
+      //     "sass-loader",
+      //   ]
+      // },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader",
+      //     "sass-loader",
+      //   ]
+      // },
     ],
   },
 };
