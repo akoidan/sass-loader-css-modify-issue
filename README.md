@@ -1,26 +1,6 @@
-`yarn install`
+style-loader sourcemap issue minimal sample. To run:
 
-`yarn run build`
+- `npm install`
+- `npm run dev`
 
-**expected output**:
-
-```
-body { }
-  body .black {
-    background-color: black; }
-  body .red {
-    background-color: red; }
-
-```
-
-**actual output**:
-```
-.red {
-    background-color: red
-}
-
-body { }
-  body .black {
-    background-color: black; }
-
-```
+Open devtools and check body background-style location
