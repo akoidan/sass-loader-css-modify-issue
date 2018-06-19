@@ -1,37 +1,23 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
-  entry: "./main.sass",
-  resolve: {
-    extensions: ['.sass', '.css'],
-  },
-  plugins: [new MiniCssExtractPlugin()],
+  entry: "./main.css",
+  devtool: '#source-map',
   module: {
     rules: [
       {
-        test: /\.sass$/,
+        test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true,
+              convertToAbsoluteUrls: true
+            }
+          },
           "css-loader",
-          "sass-loader?indentedSyntax",
         ]
       },
-      // {
-      //   test: /\.fff$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     "css-loader",
-      //     "sass-loader",
-      //   ]
-      // },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     "css-loader",
-      //     "sass-loader",
-      //   ]
-      // },
     ],
   },
 };
